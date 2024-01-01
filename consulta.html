@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="autor" content="Yourdyy Yossimar Huayhua Hillpa">
-    <meta name="Descripción" content="Pagina web para hacer consultas en linea.">
-    <title>Consulta de Universidades</title>
+    <meta name="Descripción" content="Pagina web para hacer consulta sobre Universidades">
+    <link rel="shortcut icon" href="src/icono_libro.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="disenio.css" />
+    <title>Consulta Bibliografica</title>
 </head>
 <body>
     <header>
-        <h2>Consulta de Universidades</h2>
+        <h2>Consulta bibliografica sobre universidades</h2>
     </header>
     <main>
-        <p>Puedes ingresar uno de los siguientes datos para buscar la información de la universidad: </p>
-        <ul>
+        <p>Ingrese uno de los siguientes datos para hacer la consulta (La busqueda en MAYUSCULAS): </p>
+        <ol>
             <li>Nombre Universidad</li>
-            <li>Periodo Licenciamiento</li>
-            <li>Departamento Local</li>
-            <li>Denominación Programa</li>
-        </ul>
+            <li>Codigo de Entidad: ---</li>
+        </ol>
+        <form action="cgi-bin/Consultar.pl" method="get">
+            <input class="Entrada" type="text" name="Busqueda" placeholder="065">
+            <input class="Buscar" type="submit" value="Buscar">
+        </form>
     </main>
     <footer>
-        &copy;2023 <b>Yourdyy</b> 
+        &copy;2023 <b>Yourdyy</b>
     </footer>
 </body>
 </html>
