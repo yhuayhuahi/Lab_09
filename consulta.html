@@ -14,13 +14,20 @@
         <h2>Consulta bibliografica sobre universidades</h2>
     </header>
     <main>
-        <p>Ingrese uno de los siguientes datos para hacer la consulta (La busqueda en MAYUSCULAS): </p>
-        <ol>
-            <li>Nombre Universidad</li>
-            <li>Codigo de Entidad: ---</li>
-        </ol>
-        <form action="cgi-bin/Consultar.pl" method="get">
-            <input class="Entrada" type="text" name="Busqueda" placeholder="065">
+        <p>Ingrese los siguientes datos para hacer la consulta (La busqueda sin tildes): </p>
+        <form action="cgi-bin/Consultar.pl" method="post">
+            <label for="Nombre" >Nombre de la Universidad</label>
+            <input class="Entrada" type="text" name="Nombre" placeholder="UNIVERSIDAD TECNOLOGICA DEL PERU S.A.C.">
+            <br>
+            <label for="Periodo" >Periodo de Licenciamiento</label>
+            <input class="Entrada" type="text" name="Periodo" placeholder="6">
+            <br>
+            <label for="Departamento" >Departamento Local</label>
+            <input class="Entrada" type="text" name="Departamento" placeholder="LIMA">
+            <br>
+            <label for="Denominacion" >Denominación de Programa</label>
+            <input class="Entrada" type="text" name="Denominacion" placeholder="CARRERA PROFESIONAL">
+            <br>
             <input class="Buscar" type="submit" value="Buscar">
         </form>
     </main>
