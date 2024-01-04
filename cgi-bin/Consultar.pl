@@ -6,15 +6,18 @@ use CGI;
 
 my $cgi = CGI -> new;
 
+## Capturamos los parametros enviados desde los formularios
 my $nombre_universidad = $cgi -> param('Nombre');
 my $periodo_licenciamiento = $cgi -> param('Periodo');
 my $departamento_local = $cgi -> param('Departamento');
 my $denominacion_programa = $cgi -> param('Denominacion');
 
+## Abro el archivo en modo de lectura para la busqueda
 open (my $archivo, "Programas de Universidades.csv") or die "No se pudo abrir el archivo";
 
 my $busqueda;
 my @universidad; 
+## Bucle para recorrer linea por linea el archivo .csv
 while (<$archivo>){
     chomp;
     $_ =~ s/�/*/g;
@@ -29,6 +32,7 @@ while (<$archivo>){
     last if $busqueda;
 }
 
+## Se escribe el documento html
 print $cgi -> header('text/html');
 print <<HTML;
 <!DOCTYPE html>
